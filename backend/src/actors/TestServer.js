@@ -1,6 +1,6 @@
 
-var express = require('express')
-
+const express = require('express')
+const path = require('path');
 
 class TestServer
   {
@@ -11,16 +11,21 @@ class TestServer
 
       this.server = express();
 
+
       selfActor.getLog().info(selfActor + " initialized Express");
       return selfActor;
       }
   setup(port)
     {
     this.selfActor.getLog().info(this.selfActor + " - Setting up Express Routes");
-    this.server.get('/', function (req, res)
-        {
-          res.send('hello world')
-        })
+
+
+    this.server.use('/', express.static(path.join(__dirname, 'public')))
+
+
+
+
+
     this.selfActor.getLog().info(this.selfActor + " - Listening on port " + port);
       this.server.listen(port);
     }
