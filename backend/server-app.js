@@ -1,6 +1,8 @@
 
 const vorpal = require('vorpal')();
 const chalk = vorpal.chalk;
+
+
 const AppName = "backend-boilerplate";
 console.log(chalk.red("Loaded:\t\t " + AppName));
 console.log(chalk.red("Loaded:\t\t Volpar Framework"));
@@ -42,15 +44,23 @@ var ActorsToLoad = [
                     ["/src/actors/ServerApp", AppName],
                     ["/src/actors/SimpleLoggerActor", SimpleLoggerRollingLogs],
                     ["/src/actors/VorpalActor", ""],
-                    ["/src/actors/HTTPServerActor",8080]
+                    ["/src/actors/HTTPServerActor",8080],
+                    ["/src/actors/IvanActor", "test data"]
                    ];
+
+
+
 
 console.log(chalk.yellow("Number of Actors that will be loaded: \t\t" + ActorsToLoad.length));
 
 // when I have loaded the actors above, I will place the actor references inside this array
 // for convienence;
 var loadedActors = []
+
 console.log(chalk.yellow("Number of Currently Actors Loaded:\t\t" + loadedActors.length));
+
+
+
 
 // for each 'Actor' and Data'
 ActorsToLoad.forEach(value => {

@@ -17,11 +17,6 @@ class HTTPServerActor
         setup(activePort)
     			{
     				this.selfActor.getLog().info("Actor setup for [" + this.selfActor.name + "] on port " + activePort);
-
-
-    				// lets change the application's title, so it is reflected in terminal
-    				process.title = applicationTitle;
-
       		}
 
           displayStartupInfo()
