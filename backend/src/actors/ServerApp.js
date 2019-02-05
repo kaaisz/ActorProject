@@ -1,5 +1,10 @@
 
 
+
+
+
+
+
 // This class represents the root of our application, it will co-ordinate all the steps necessary to start
 // our application
 class ServerApp
@@ -9,7 +14,7 @@ class ServerApp
 			{
 			this.selfActor = selfActor;
 
-			selfActor.getLog().info("Actor initialize [" + selfActor + "]");
+			this.selfActor.getLog().info("Actor initialize [" + selfActor + "]");
 			return 	this.selfActor;
 			}
 

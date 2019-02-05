@@ -3,20 +3,16 @@
 
 class IvanActor
   {
-  constructor()
-    {
-    console.log("Ivan")
-    }
-
   initialize(selfActor)
     {
     this.selfActor = selfActor;
     console.log("Created Actor:" + selfActor);
+    return selfActor;
     }
 
   setup(data)
     {
-    console.log("Data"+ data)
+    this.selfActor.getLog().info("Actor setup for [" + this.selfActor.name + "] with data " + data);
     }
 
   displayStartupInfo()

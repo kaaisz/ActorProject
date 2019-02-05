@@ -23,7 +23,7 @@ console.log(chalk.red("Loaded:\t\t Actor System"));
 var logger = actorSystem.getLog();
 console.log(logger.levels())
 console.log(chalk.red("Loaded:\t\t Actor System Logger"));
-logger.setLevel(logger.levels().Debug);
+logger.setLevel(logger.levels().Silent);
 //logger.setLevel(logger.levels().Silent);
 
 
@@ -44,8 +44,9 @@ var ActorsToLoad = [
                     ["/src/actors/ServerApp", AppName],
                     ["/src/actors/SimpleLoggerActor", SimpleLoggerRollingLogs],
                     ["/src/actors/VorpalActor", ""],
-                    ["/src/actors/HTTPServerActor",8080],
-                    ["/src/actors/IvanActor", "test data"]
+                    ["/src/actors/HTTPServerActor",""],
+                    ["/src/actors/IvanActor", "testata"],
+                    ["/src/actors/TestServer",8080]
                    ];
 
 
