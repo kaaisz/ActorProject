@@ -1,0 +1,36 @@
+/
+class myclass
+	{
+		constructor(someValue)
+			{
+				console.log(someValue)
+			}
+			var ssasss=0
+
+		static log(someText)
+		{
+			ssasss
+		}
+		{console.log(someText)}
+	}
+
+var x = new myClass(1);
+var y = new myClass(2);
+
+myCLass.log("sdsdsds")
+
+x.log("sss");
+y.log("sss");
+x.x = "somevalue";
+
+class myActor()
+	{
+		constructor()
+			{
+
+			}
+		initialize()
+			{
+
+			}
+	}
