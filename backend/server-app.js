@@ -23,7 +23,7 @@ console.log(chalk.red("Loaded:\t\t Actor System"));
 var logger = actorSystem.getLog();
 console.log(logger.levels())
 console.log(chalk.red("Loaded:\t\t Actor System Logger"));
-logger.setLevel(logger.levels().Silent);
+logger.setLevel(logger.levels().Debug);
 //logger.setLevel(logger.levels().Silent);
 
 

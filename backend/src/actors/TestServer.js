@@ -7,7 +7,7 @@ class TestServer
     initialize(selfActor)
       {
       this.selfActor = selfActor;
-      selfActor.getLog().info("Actor initialize [" + selfActor + "]");
+      this.selfActor.getLog().info("Actor initialize [" + selfActor + "]");
 
       this.server = express();
 
@@ -16,12 +16,12 @@ class TestServer
       }
   setup(port)
     {
-    elfActor.getLog().info(selfActor + " - Setting up Express Routes");
+    this.selfActor.getLog().info(this.selfActor + " - Setting up Express Routes");
     this.server.get('/', function (req, res)
         {
           res.send('hello world')
         })
-    selfActor.getLog().info(selfActor + " - Listening on port " + port);
+    this.selfActor.getLog().info(this.selfActor + " - Listening on port " + port);
       this.server.listen(port);
     }
 
