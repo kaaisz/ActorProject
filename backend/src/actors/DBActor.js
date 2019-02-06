@@ -17,6 +17,9 @@ class DBActor
     {
       // call getrecord, insertRecord etc from here, this function will be
       // called when the actor starts up correctly
+    var aRecord = this.getRecord(1);
+    console.log("I GOT RECORD 1 " + aRecord);
+
     }
 
     getRecord(id)
@@ -25,7 +28,9 @@ class DBActor
     }
 
     insertRecord(newData)
-    {}
+    {
+
+    }
 
     updateRecord(data, id)
     {}
