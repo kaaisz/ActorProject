@@ -4,29 +4,39 @@
 
 
 class HTTPServerActor
+{
+  initialize(selfActor)
+    {
+    this.selfActor = selfActor;
+    this.selfActor.getLog().info("Actor initialize [" + selfActor + "]");
+
+    this.server = express();
+
+
+    selfActor.getLog().info(selfActor + " initialized Express");
+    return selfActor;
+    }
+setup(port)
   {
-    // our constuctor is called each time a new instance of our class is created
-  	  initialize(selfActor)
-  			{
-  			this.selfActor = selfActor;
+  this.selfActor.getLog().info(this.selfActor + " - Setting up Express Routes");
 
-  			selfActor.getLog().info("Actor initialize [" + selfActor + "]");
-  			return 	this.selfActor;
-  			}
 
-        setup(activePort)
-    			{
-    				this.selfActor.getLog().info("Actor setup for [" + this.selfActor.name + "] on port " + activePort);
-      		}
+  this.server.use('/', express.static(path.join(__dirname, 'public')))
 
-          displayStartupInfo()
-        		{
-        		// here we will use 'process' to retrieve some useful information about our environment
-        		// See https://nodejs.org/api/process.html - to see what else you can do with nodejs's 'process'
 
-        		// this indicates which 'nodejs' installation is running our application
-        		this.selfActor.getLog().info("Node Path: " + process.argv[0]);
-          }
+
+
+
+
+  this.selfActor.getLog().info(this.selfActor + " - Listening on port " + port);
+    this.server.listen(port);
   }
+
+ displayStartupInfo()
+  {
+
+  }
+}
+
 
   module.exports = HTTPServerActor
