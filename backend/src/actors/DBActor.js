@@ -12,6 +12,27 @@ class DBActor
       return this.selfActor;
     }
 
+
+    test()
+    {
+      // call getrecord, insertRecord etc from here, this function will be
+      // called when the actor starts up correctly
+    }
+
+    getRecord(id)
+    {
+
+    }
+
+    insertRecord(newData)
+    {}
+
+    updateRecord(data, id)
+    {}
+
+    deleteRecord(id)
+    {}
+
     setup(csvFile)
       {
         this.selfActor.getLog().info(this.selfActor + " - Setting up Database");
@@ -37,6 +58,7 @@ class DBActor
    displayStartupInfo()
     {
       this.selfActor.getLog().info(this.selfActor + " - Connection should be established");
+      this.test();
     }
   }
 
