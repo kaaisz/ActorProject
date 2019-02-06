@@ -45,7 +45,7 @@ var ActorsToLoad = [
                     ["/src/actors/SimpleLoggerActor", SimpleLoggerRollingLogs],
                     ["/src/actors/VorpalActor", ""],
                     ["/src/actors/HTTPServerActor",8080],
-                    ["/src/actors/DBActor","nodata"]
+                    ["/src/actors/DBActor","./database/db.csv"]
                    ];
 
 
