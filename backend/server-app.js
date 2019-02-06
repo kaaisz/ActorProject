@@ -43,8 +43,9 @@ const SimpleLoggerRollingLogs = false
 var ActorsToLoad = [
                     ["/src/actors/ServerApp", AppName],
                     ["/src/actors/SimpleLoggerActor", SimpleLoggerRollingLogs],
-                    ["/src/actors/VorpalActor", ""],          
+                    ["/src/actors/VorpalActor", ""],
                     ["/src/actors/HTTPServerActor",8080],
+                    ["/src/actors/DBActor","nodata"]
                    ];
 
 
